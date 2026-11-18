@@ -32,6 +32,7 @@
         <a href="#o-nas">O nás</a>
         <a href="#rezervacie">Rezervácie</a>
         <a href="#hodnotenia">Hodnotenia</a>
+        <a href="#kontakt">Kontakty</a>
       </nav>
 
       <div class="header-actions">
@@ -303,7 +304,403 @@
         <p class="visually-hidden" id="cart-status" role="status" aria-live="polite"></p>
       </div>
     </section>
+
+    <section class="about-section" id="o-nas" aria-labelledby="about-title">
+      <div class="about-hero">
+        <div class="about-hero-content">
+          <p class="eyebrow">U Josefa <span aria-hidden="true">•</span> od roku 1979</p>
+          <h2 id="about-title">Viac než kaviareň.<span>Príbeh Boryslava.</span></h2>
+          <p>Rodinné hodnoty, historické korene a pohostinnosť, ktorá spája ľudí.</p>
+        </div>
+      </div>
+
+      <div class="about-inner">
+        <section class="about-story" aria-labelledby="story-title">
+          <header class="about-section-heading">
+            <p class="eyebrow">Dve kapitoly, jedno miesto</p>
+            <h3 id="story-title">Náš príbeh</h3>
+          </header>
+
+          <ol class="history-timeline" aria-label="Časová os histórie kaviarne">
+            <li>
+              <span class="history-date">Od roku 1979</span>
+              <span class="history-label">Štátna kaviareň Veselka</span>
+            </li>
+            <li>
+              <span class="history-date">Rok 2000</span>
+              <span class="history-label">Nová rodinná kapitola</span>
+            </li>
+          </ol>
+
+          <div class="history-grid">
+            <article class="history-card">
+              <figure>
+                <img src="img/about/veselka-illustration.jpg" alt="Ilustračný interiér tradičnej kaviarne; nejde o archívny záber Veselky." loading="lazy" decoding="async">
+                <figcaption>Ilustračná fotografia kaviarne</figcaption>
+              </figure>
+              <h4>Začiatky: štátna kaviareň Veselka</h4>
+              <p>Od roku 1979 v tejto budove fungovala štátna kaviareň Veselka. Miestni obyvatelia si miesto pamätajú aj z týchto čias.</p>
+            </article>
+
+            <article class="history-card">
+              <figure>
+                <img src="img/about/family-cafe.jpg" alt="Ilustračná fotografia interiéru rodinnej kaviarne." loading="lazy" decoding="async">
+                <figcaption>Ilustračná fotografia rodinnej kaviarne</figcaption>
+              </figure>
+              <h4>Nová kapitola: U Josefa</h4>
+              <p>V roku 2000 budovu odkúpil strýko Jozef z Ameriky a daroval ju babičke. Z tohto rodinného príbehu vyrástla tradícia kaviarne U Josefa.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="about-spaces" aria-labelledby="spaces-title">
+          <div class="about-spaces-copy">
+            <p class="eyebrow">Naše priestory</p>
+            <h3 id="spaces-title">Miesto pre spoločné chvíle</h3>
+            <p>U Josefa spája miestnu históriu, domácu atmosféru a moderné pohodlie. Priestor je určený na kávu, obed aj rodinné oslavy.</p>
+            <ul class="space-list">
+              <li>Hlavná kaviareň</li>
+              <li>Tichý salónik</li>
+              <li>Letná terasa</li>
+            </ul>
+          </div>
+          <figure class="about-space-photo">
+            <img src="img/about/quiet-salon.jpg" alt="Ilustračná fotografia interiéru kaviarne s miestami na sedenie." loading="lazy" decoding="async">
+            <figcaption>Ilustračná fotografia priestoru kaviarne</figcaption>
+          </figure>
+        </section>
+      </div>
+    </section>
+
+    <section class="reservation-section" id="rezervacie" aria-labelledby="reservation-title">
+      <header class="reservation-hero">
+        <p class="eyebrow">U Josefa <span aria-hidden="true">•</span> rezervácie</p>
+        <h2 id="reservation-title">Rezervujte si svoj stôl</h2>
+        <p>Či plánujete pokojný obed, rodinnú oslavu alebo pracovné stretnutie, radi vám pomôžeme pripraviť príjemný zážitok.</p>
+      </header>
+
+      <div class="reservation-inner">
+        <form class="reservation-form" id="reservation-form">
+          <fieldset class="reservation-step">
+            <legend class="visually-hidden">Detaily rezervácie</legend>
+            <div class="reservation-step-heading">
+              <p class="eyebrow">01 <span aria-hidden="true">•</span> Váš stôl</p>
+              <h3>Detaily rezervácie</h3>
+            </div>
+
+            <div class="reservation-fields">
+              <div class="reservation-field">
+                <label for="reservation-date">Dátum rezervácie <span aria-hidden="true">*</span></label>
+                <input id="reservation-date" name="date" type="date" required>
+              </div>
+              <div class="reservation-field">
+                <label for="reservation-time">Čas rezervácie <span aria-hidden="true">*</span></label>
+                <input id="reservation-time" name="time" type="time" required>
+              </div>
+              <div class="reservation-field">
+                <label for="reservation-guests">Počet osôb <span aria-hidden="true">*</span></label>
+                <select id="reservation-guests" name="guests" required>
+                  <option value="" selected disabled>Vyberte počet osôb</option>
+                  <option value="1">1 osoba</option>
+                  <option value="2">2 osoby</option>
+                  <option value="3">3 osoby</option>
+                  <option value="4">4 osoby</option>
+                  <option value="5">5 osôb</option>
+                  <option value="6">6 osôb</option>
+                  <option value="7">7 osôb</option>
+                  <option value="8">8 osôb</option>
+                  <option value="9">9 osôb</option>
+                  <option value="10">10 a viac osôb</option>
+                </select>
+              </div>
+              <div class="reservation-field">
+                <label for="reservation-occasion">Typ návštevy <span aria-hidden="true">*</span></label>
+                <select id="reservation-occasion" name="occasion" required>
+                  <option value="" selected disabled>Vyberte príležitosť</option>
+                  <option value="bežná návšteva">Bežná návšteva</option>
+                  <option value="obed s kolegami">Obed s kolegami</option>
+                  <option value="rodinná oslava">Rodinná oslava</option>
+                  <option value="firemné stretnutie">Firemné stretnutie</option>
+                  <option value="iná príležitosť">Iná príležitosť</option>
+                </select>
+              </div>
+              <div class="reservation-field reservation-field-wide">
+                <label for="reservation-note">Špeciálne požiadavky <span>(nepovinné)</span></label>
+                <textarea id="reservation-note" name="note" rows="4" placeholder="Napíšte nám svoje požiadavky, počet detí alebo želaný stôl..."></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="reservation-step">
+            <legend class="visually-hidden">Kontaktné údaje</legend>
+            <div class="reservation-step-heading">
+              <p class="eyebrow">02 <span aria-hidden="true">•</span> Aby sme sa vám ozvali</p>
+              <h3>Kontaktné údaje</h3>
+            </div>
+
+            <div class="reservation-fields">
+              <div class="reservation-field">
+                <label for="reservation-name">Meno a priezvisko <span aria-hidden="true">*</span></label>
+                <input id="reservation-name" name="name" type="text" autocomplete="name" placeholder="Vaše meno" required>
+              </div>
+              <div class="reservation-field">
+                <label for="reservation-phone">Telefónne číslo <span aria-hidden="true">*</span></label>
+                <input id="reservation-phone" name="phone" type="tel" autocomplete="tel" placeholder="+380 00 000 00 00" required>
+              </div>
+              <div class="reservation-field reservation-field-wide">
+                <label for="reservation-email">E-mail <span>(nepovinný)</span></label>
+                <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="vas@email.sk">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="reservation-confirmation" id="reservation-confirmation" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden>
+            <span class="reservation-confirmation-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="m5 12.5 4.5 4.5L19 7" />
+              </svg>
+            </span>
+            <div>
+              <h3 id="reservation-confirmation-title"></h3>
+              <p id="reservation-confirmation-details"></p>
+              <p class="reservation-confirmation-note">Ide o prototyp bez serverového odoslania; prevádzka túto žiadosť zatiaľ nedostane.</p>
+            </div>
+          </div>
+
+          <button class="reservation-submit" type="submit">
+            Odoslať žiadosť o rezerváciu
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 12h15m-6-6 6 6-6 6" />
+            </svg>
+          </button>
+          <p class="reservation-form-note">Polia označené hviezdičkou sú povinné. Údaje z tohto prototypu sa neodosielajú na server.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="reviews-section" id="hodnotenia" aria-labelledby="reviews-title">
+      <header class="reviews-hero">
+        <p class="eyebrow">U Josefa <span aria-hidden="true">•</span> Boryslav</p>
+        <h2 id="reviews-title">Hodnotenia našich hostí</h2>
+        <p>Čo hovoria ľudia, ktorí nás navštívili.</p>
+      </header>
+
+      <div class="reviews-inner">
+        <header class="reviews-section-heading">
+          <p class="eyebrow">Hlas našich hostí</p>
+          <h3>Miesto, kam sa radi vraciate</h3>
+        </header>
+
+        <div class="rating-summary">
+          <div class="rating-score">
+            <strong>4.8</strong>
+            <span class="rating-score-stars" role="img" aria-label="4,8 z 5 hviezdičiek">★★★★★</span>
+            <p>Založené na 24 hodnoteniach</p>
+          </div>
+          <div class="rating-breakdown" aria-label="Rozdelenie hodnotení">
+            <div class="rating-row">
+              <span class="rating-level">5 <span aria-hidden="true">★</span></span>
+              <span class="rating-bar" role="img" aria-label="83 percent">
+                <span style="width: 83%"></span>
+              </span>
+              <span class="rating-percent">83%</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-level">4 <span aria-hidden="true">★</span></span>
+              <span class="rating-bar" role="img" aria-label="14 percent">
+                <span style="width: 14%"></span>
+              </span>
+              <span class="rating-percent">14%</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-level">3 <span aria-hidden="true">★</span></span>
+              <span class="rating-bar" role="img" aria-label="2 percent">
+                <span style="width: 2%"></span>
+              </span>
+              <span class="rating-percent">2%</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-level">2 <span aria-hidden="true">★</span></span>
+              <span class="rating-bar" role="img" aria-label="0 percent">
+                <span style="width: 0%"></span>
+              </span>
+              <span class="rating-percent">0%</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-level">1 <span aria-hidden="true">★</span></span>
+              <span class="rating-bar" role="img" aria-label="0 percent">
+                <span style="width: 0%"></span>
+              </span>
+              <span class="rating-percent">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-list-heading">
+          <div>
+            <p class="eyebrow">Skúsenosti z prvej ruky</p>
+            <h3>Čo hovoria naši hostia</h3>
+          </div>
+          <span>24 hodnotení</span>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <header class="review-card-header">
+              <div class="review-person">
+                <span class="review-avatar" aria-hidden="true">AK</span>
+                <div>
+                  <h4>Andrej K.</h4>
+                  <time datetime="2022-07-28">28. 07. 2022</time>
+                </div>
+              </div>
+              <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
+            </header>
+            <blockquote><p>Nádherná atmosféra a nezabudnuteľná káva. Odporúčam každému.</p></blockquote>
+          </article>
+
+          <article class="review-card">
+            <header class="review-card-header">
+              <div class="review-person">
+                <span class="review-avatar" aria-hidden="true">MS</span>
+                <div>
+                  <h4>Mária S.</h4>
+                  <time datetime="2022-07-14">14. 07. 2022</time>
+                </div>
+              </div>
+              <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
+            </header>
+            <blockquote><p>Čarovné miesto s krásnou históriou. Koláč bol výborný a obsluha milá.</p></blockquote>
+          </article>
+
+          <article class="review-card">
+            <header class="review-card-header">
+              <div class="review-person">
+                <span class="review-avatar" aria-hidden="true">PV</span>
+                <div>
+                  <h4>Peter V.</h4>
+                  <time datetime="2022-07-09">09. 07. 2022</time>
+                </div>
+              </div>
+              <span class="review-stars" role="img" aria-label="4 z 5 hviezdičiek"><span aria-hidden="true">★★★★☆</span></span>
+            </header>
+            <blockquote><p>Skvelé posedenie v srdci mesta. Určite sa sem ešte vrátim.</p></blockquote>
+          </article>
+
+          <article class="review-card">
+            <header class="review-card-header">
+              <div class="review-person">
+                <span class="review-avatar" aria-hidden="true">JL</span>
+                <div>
+                  <h4>Jana L.</h4>
+                  <time datetime="2022-06-21">21. 06. 2022</time>
+                </div>
+              </div>
+              <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
+            </header>
+            <blockquote><p>Tichá, útulná a plná príbehov. Káva chutila naozaj výborne.</p></blockquote>
+          </article>
+
+          <article class="review-card">
+            <header class="review-card-header">
+              <div class="review-person">
+                <span class="review-avatar" aria-hidden="true">TB</span>
+                <div>
+                  <h4>Tomáš B.</h4>
+                  <time datetime="2022-06-09">09. 06. 2022</time>
+                </div>
+              </div>
+              <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
+            </header>
+            <blockquote><p>Jedinečný podnik, ktorý má dušu. Veľmi príjemný večer.</p></blockquote>
+          </article>
+
+          <article class="review-card">
+            <header class="review-card-header">
+              <div class="review-person">
+                <span class="review-avatar" aria-hidden="true">EM</span>
+                <div>
+                  <h4>Eva M.</h4>
+                  <time datetime="2022-05-27">27. 05. 2022</time>
+                </div>
+              </div>
+              <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
+            </header>
+            <blockquote><p>Krásne prostredie a domáca atmosféra. Ďakujeme za zážitok.</p></blockquote>
+          </article>
+        </div>
+
+        <form class="review-form reservation-form" id="review-form">
+          <div class="review-form-heading">
+            <p class="eyebrow">Podeľte sa o svoj zážitok</p>
+            <h3>Napíšte nám hodnotenie</h3>
+          </div>
+          <div class="reservation-fields">
+            <div class="reservation-field">
+              <label for="review-name">Vaše meno <span aria-hidden="true">*</span></label>
+              <input id="review-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Vaše meno" required>
+            </div>
+            <div class="reservation-field">
+              <label for="review-rating">Hodnotenie <span aria-hidden="true">*</span></label>
+              <select id="review-rating" name="rating" required>
+                <option value="5">5 hviezdičiek</option>
+                <option value="4">4 hviezdičky</option>
+                <option value="3">3 hviezdičky</option>
+                <option value="2">2 hviezdičky</option>
+                <option value="1">1 hviezdička</option>
+              </select>
+            </div>
+            <div class="reservation-field reservation-field-wide">
+              <label for="review-text">Vaša recenzia <span aria-hidden="true">*</span></label>
+              <textarea id="review-text" name="text" rows="4" maxlength="1000" placeholder="Podeľte sa o svoj zážitok z návštevy..." required></textarea>
+            </div>
+          </div>
+          <button class="reservation-submit" type="submit">Odoslať hodnotenie</button>
+          <p class="reservation-form-note">Hodnotenie sa uloží v tomto zariadení. Polia označené hviezdičkou sú povinné.</p>
+          <p class="review-form-status" id="review-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <header class="contact-heading">
+          <p class="eyebrow">U Josefa <span aria-hidden="true">•</span> Boryslav</p>
+          <h2 id="contact-title">Navštívte nás</h2>
+          <p>Radi vás privítame na dobrej káve a príjemnom posedení.</p>
+        </header>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Kde nás nájdete</h3>
+            <address><a class="contact-address-link" href="https://maps.app.goo.gl/abeN7UNxZwrWpmPX8?g_st=ic" target="_blank" rel="noopener noreferrer">82300, Boryslav,<br>Doroshenka St., 19</a></address>
+          </article>
+
+          <article class="contact-card">
+            <h3>Otváracie hodiny</h3>
+            <p class="contact-hours">Každý deň <span>09:00 - 17:00</span></p>
+          </article>
+
+          <article class="contact-card">
+            <h3>Ozvite sa nám</h3>
+            <a class="contact-detail" href="tel:+380635582109">+380 63 55 82 109</a>
+            <p class="contact-detail">kafe.u.jozefagmail.com</p>
+            <nav class="social-links" aria-label="Sociálne siete">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            </nav>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a class="footer-brand" href="#domov">U. <span>JOSEFA</span></a>
+      <p>© 2026 U Josefa. Všetky práva vyhradené.</p>
+    </div>
+  </footer>
 
   <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-dialog-title">
     <header class="cart-dialog-header">

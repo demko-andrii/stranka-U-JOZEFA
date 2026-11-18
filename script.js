@@ -245,3 +245,196 @@ if (menuGrid && menuSearch && menuFilters && emptyMenuMessage) {
     openCart();
   });
 }
+
+const reservationForm = document.querySelector("#reservation-form");
+const reservationDateInput = document.querySelector("#reservation-date");
+const reservationConfirmation = document.querySelector("#reservation-confirmation");
+const reservationConfirmationTitle = document.querySelector("#reservation-confirmation-title");
+const reservationConfirmationDetails = document.querySelector("#reservation-confirmation-details");
+
+if (reservationDateInput instanceof HTMLInputElement) {
+  const today = new Date();
+  today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  reservationDateInput.min = today.toISOString().slice(0, 10);
+}
+
+if (
+  reservationForm instanceof HTMLFormElement
+  && reservationConfirmation instanceof HTMLElement
+  && reservationConfirmationTitle instanceof HTMLElement
+  && reservationConfirmationDetails instanceof HTMLElement
+) {
+  const nameInput = reservationForm.querySelector("#reservation-name");
+  const dateInput = reservationForm.querySelector("#reservation-date");
+  const timeInput = reservationForm.querySelector("#reservation-time");
+  const guestsSelect = reservationForm.querySelector("#reservation-guests");
+
+  if (
+    nameInput instanceof HTMLInputElement
+    && dateInput instanceof HTMLInputElement
+    && timeInput instanceof HTMLInputElement
+    && guestsSelect instanceof HTMLSelectElement
+  ) {
+    reservationForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!reservationForm.reportValidity()) return;
+
+      const name = nameInput.value.trim();
+      if (!name) {
+        nameInput.setCustomValidity("Zadajte svoje meno a priezvisko.");
+        nameInput.reportValidity();
+        nameInput.setCustomValidity("");
+        return;
+      }
+
+      const selectedGuests = guestsSelect.selectedOptions.item(0);
+      if (!selectedGuests) {
+        guestsSelect.reportValidity();
+        return;
+      }
+
+      const [year, month, day] = dateInput.value.split("-").map(Number);
+      const formattedDate = new Date(year, month - 1, day).toLocaleDateString("sk-SK", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      });
+
+      reservationConfirmationTitle.textContent = `Ďakujeme, ${name}!`;
+      reservationConfirmationDetails.textContent = `Vaša žiadosť o stôl pre ${selectedGuests.textContent?.trim()} na ${formattedDate} o ${timeInput.value} bola zaznamenaná.`;
+      reservationConfirmation.hidden = false;
+      reservationConfirmation.focus({ preventScroll: true });
+      reservationConfirmation.scrollIntoView({ block: "center" });
+    });
+  }
+}
+
+const reviewForm = document.querySelector("#review-form");
+const reviewsGrid = document.querySelector(".reviews-grid");
+const reviewFormStatus = document.querySelector("#review-form-status");
+const reviewsStorageKey = "u-josefa-reviews";
+
+if (
+  reviewForm instanceof HTMLFormElement
+  && reviewsGrid instanceof HTMLElement
+  && reviewFormStatus instanceof HTMLElement
+) {
+  const nameInput = reviewForm.querySelector("#review-name");
+  const ratingSelect = reviewForm.querySelector("#review-rating");
+  const textInput = reviewForm.querySelector("#review-text");
+
+  const isReview = (value) => (
+    typeof value === "object"
+    && value !== null
+    && typeof value.name === "string"
+    && value.name.trim().length > 0
+    && Number.isInteger(value.rating)
+    && value.rating >= 1
+    && value.rating <= 5
+    && typeof value.text === "string"
+    && value.text.trim().length > 0
+    && typeof value.date === "string"
+    && !Number.isNaN(Date.parse(value.date))
+  );
+
+  const createReviewCard = (review) => {
+    const card = document.createElement("article");
+    card.className = "review-card";
+
+    const header = document.createElement("header");
+    header.className = "review-card-header";
+
+    const person = document.createElement("div");
+    person.className = "review-person";
+
+    const avatar = document.createElement("span");
+    avatar.className = "review-avatar";
+    avatar.setAttribute("aria-hidden", "true");
+    const initials = review.name.trim().split(/\s+/).slice(0, 2)
+      .map((part) => Array.from(part)[0] || "")
+      .join("")
+      .toLocaleUpperCase("sk-SK");
+    avatar.textContent = initials;
+
+    const personDetails = document.createElement("div");
+    const name = document.createElement("h4");
+    name.textContent = review.name.trim();
+
+    const date = document.createElement("time");
+    date.dateTime = review.date;
+    date.textContent = new Date(review.date).toLocaleDateString("sk-SK", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+    personDetails.append(name, date);
+    person.append(avatar, personDetails);
+
+    const stars = document.createElement("span");
+    stars.className = "review-stars";
+    stars.setAttribute("role", "img");
+    stars.setAttribute("aria-label", `${review.rating} z 5 hviezdičiek`);
+    const starDisplay = document.createElement("span");
+    starDisplay.setAttribute("aria-hidden", "true");
+    starDisplay.textContent = `${"★".repeat(review.rating)}${"☆".repeat(5 - review.rating)}`;
+    stars.append(starDisplay);
+    header.append(person, stars);
+
+    const quote = document.createElement("blockquote");
+    const paragraph = document.createElement("p");
+    paragraph.textContent = review.text.trim();
+    quote.append(paragraph);
+    card.append(header, quote);
+    return card;
+  };
+
+  try {
+    const storedReviews = localStorage.getItem(reviewsStorageKey);
+    if (storedReviews) {
+      const parsedReviews = JSON.parse(storedReviews);
+      if (!Array.isArray(parsedReviews) || !parsedReviews.every(isReview)) {
+        throw new Error("Uložené hodnotenia majú neplatný formát.");
+      }
+      parsedReviews.forEach((review) => reviewsGrid.append(createReviewCard(review)));
+    }
+  } catch {
+    reviewFormStatus.textContent = "Uložené hodnotenia sa nepodarilo načítať.";
+  }
+
+  if (
+    nameInput instanceof HTMLInputElement
+    && ratingSelect instanceof HTMLSelectElement
+    && textInput instanceof HTMLTextAreaElement
+  ) {
+    reviewForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!reviewForm.reportValidity()) return;
+
+      const name = nameInput.value.trim();
+      const text = textInput.value.trim();
+      const rating = Number(ratingSelect.value);
+      if (!name || !text || !Number.isInteger(rating) || rating < 1 || rating > 5) {
+        reviewFormStatus.textContent = "Skontrolujte, prosím, vyplnené údaje.";
+        return;
+      }
+
+      const review = { name, rating, text, date: new Date().toISOString() };
+      reviewsGrid.append(createReviewCard(review));
+
+      try {
+        const storedReviews = localStorage.getItem(reviewsStorageKey);
+        const parsedReviews = storedReviews ? JSON.parse(storedReviews) : [];
+        if (!Array.isArray(parsedReviews) || !parsedReviews.every(isReview)) {
+          throw new Error("Uložené hodnotenia majú neplatný formát.");
+        }
+        parsedReviews.push(review);
+        localStorage.setItem(reviewsStorageKey, JSON.stringify(parsedReviews));
+        reviewFormStatus.textContent = "Ďakujeme za vaše hodnotenie. Bolo pridané a uložené v tomto zariadení.";
+      } catch {
+        reviewFormStatus.textContent = "Hodnotenie bolo pridané, ale nepodarilo sa ho uložiť v tomto zariadení.";
+      }
+
+      reviewForm.reset();
+    });
+  }
+}
