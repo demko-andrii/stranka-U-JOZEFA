@@ -42,12 +42,13 @@
           </svg>
           <span>SK</span>
         </button>
-        <button class="cart-button" type="button" aria-label="Košík">
+        <button class="cart-button" type="button" aria-label="Košík, položiek: 0" aria-controls="cart-dialog" aria-haspopup="dialog" aria-expanded="false">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6" />
             <circle cx="9.5" cy="19" r="1" />
             <circle cx="17.5" cy="19" r="1" />
           </svg>
+          <span class="cart-count" aria-hidden="true" hidden>0</span>
         </button>
       </div>
     </div>
@@ -72,6 +73,261 @@
         <span class="discover-line" aria-hidden="true"></span>
       </a>
     </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="menu-inner">
+        <header class="menu-heading">
+          <p class="eyebrow">U Josefa <span aria-hidden="true">•</span> od roku 1979</p>
+          <h2 id="menu-title">Menu a ponuka</h2>
+          <p>Vyberte si svoju obľúbenú kávu, poctivý obed alebo niečo sladké k nej.</p>
+        </header>
+
+        <div class="menu-tools">
+          <label class="menu-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 4.5 4.5" />
+            </svg>
+            <span class="visually-hidden">Hľadať jedlo alebo nápoj</span>
+            <input id="menu-search" type="search" placeholder="Hľadať jedlo alebo nápoj..." autocomplete="off">
+          </label>
+
+          <div class="menu-filters" role="group" aria-label="Filtrovať ponuku">
+            <button class="menu-filter is-active" type="button" data-category="all" aria-pressed="true">Všetko</button>
+            <button class="menu-filter" type="button" data-category="coffee" aria-pressed="false">Káva</button>
+            <button class="menu-filter" type="button" data-category="food" aria-pressed="false">Jedlá</button>
+            <button class="menu-filter" type="button" data-category="dessert" aria-pressed="false">Dezerty</button>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <article class="menu-card" data-category="coffee" data-price="45" data-search="espresso káva intenzívna čerstvo mleté zrná">
+            <div class="menu-card-visual visual-coffee">
+              <img src="img/menu/vienna-coffee.jpg" alt="Espresso v čiernej šálke" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>45 ₴</strong></div>
+              <h3>Espresso</h3>
+              <p>Malá šálka intenzívnej kávy z čerstvo mletých zŕn.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">30 ml</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Espresso">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Espresso">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Espresso">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="coffee" data-price="65" data-search="cappuccino káva mliečna pena škorica">
+            <div class="menu-card-visual visual-coffee">
+              <img src="img/menu/espresso.jpg" alt="Šálky kávy s mliečnou penou" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>65 ₴</strong></div>
+              <h3>Cappuccino</h3>
+              <p>Hladká káva s jemnou mliečnou penou a štipkou škorice.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">180 ml</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Cappuccino">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Cappuccino">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Cappuccino">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="coffee" data-price="70" data-search="caffè latte cafe latte káva mlieko espresso">
+            <div class="menu-card-visual visual-coffee">
+              <img src="img/menu/latte.jpg" alt="Káva s mliekom v sklenenom pohári, ilustračná fotografia" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>70 ₴</strong></div>
+              <h3>Caffè Latte</h3>
+              <p>Dvojité espresso zaliate horúcim, hebkým mliekom.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">250 ml</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Caffè Latte">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Caffè Latte">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Caffè Latte">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="coffee" data-price="75" data-search="viedenská káva šľahačka">
+            <div class="menu-card-visual visual-coffee">
+              <img src="img/menu/cappuccino.jpg" alt="Príprava kávy v portafiltri, ilustračná fotografia" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>75 ₴</strong></div>
+              <h3>Viedenská káva</h3>
+              <p>Silná káva s obláčikom šľahačky podľa starej receptúry.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">200 ml</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Viedenská káva">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Viedenská káva">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Viedenská káva">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="food" data-price="45" data-search="denná polievka obed domáca sezónna">
+            <div class="menu-card-visual visual-food">
+              <img src="img/menu/soup.jpg" alt="Jedlo z čerstvých surovín ako ilustrácia obedovej ponuky" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Obedové menu</span><strong>45 ₴</strong></div>
+              <h3>Denná polievka</h3>
+              <p>Každý deň čerstvá domáca polievka podľa sezónnej ponuky.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">300 ml</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Denná polievka">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Denná polievka">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Denná polievka">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="food" data-price="135" data-search="kurací rezeň kuracie zemiakový šalát uhorka">
+            <div class="menu-card-visual visual-food">
+              <img src="img/menu/schnitzel.jpg" alt="Chrumkavé kúsky vyprážaného kuracieho mäsa" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Obedové menu</span><strong>135 ₴</strong></div>
+              <h3>Kurací rezeň</h3>
+              <p>Chrumkavý rezeň, zemiakový šalát a domáca kyslá uhorka.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">250 g</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Kurací rezeň">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Kurací rezeň">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Kurací rezeň">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="food" data-price="110" data-search="domáce pirohy tvaroh zemiaky cibuľka">
+            <div class="menu-card-visual visual-food">
+              <img src="img/menu/pierogi.jpg" alt="Plnené taštičky ako ilustračná fotografia domácich pirohov" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Obedové menu</span><strong>110 ₴</strong></div>
+              <h3>Domáce pirohy</h3>
+              <p>Plnené pirohy s tvarohom alebo zemiakmi a cibuľkou.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">300 g</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Domáce pirohy">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Domáce pirohy">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Domáce pirohy">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="food" data-price="180" data-search="denné menu polievka hlavné jedlo lokálne suroviny">
+            <div class="menu-card-visual visual-food">
+              <img src="img/menu/daily-menu.jpg" alt="Výber hlavného jedla s čerstvou prílohou" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Obedové menu</span><strong>180 ₴</strong></div>
+              <h3>Denné menu</h3>
+              <p>Polievka a hlavné jedlo pripravené z lokálnych surovín.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">450 g</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Denné menu">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Denné menu">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Denné menu">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="dessert" data-price="75" data-search="domáci medovník dezert med">
+            <div class="menu-card-visual visual-dessert">
+              <img src="img/menu/medovnik.jpg" alt="Čokoládová torta ako ilustračná fotografia dezertu" loading="lazy" decoding="async">
+            </div>
+            <div class="menu-card-content">
+              <div class="menu-card-meta"><span>Domáce dezerty</span><strong>75 ₴</strong></div>
+              <h3>Domáci medovník</h3>
+              <p>Vrstvený medový koláč s jemným krémom podľa rodinného receptu.</p>
+              <div class="menu-card-footer">
+                <span class="menu-size">120 g</span>
+                <div class="menu-order">
+                  <div class="quantity-control" aria-label="Množstvo Domáci medovník">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Domáci medovník">−</button>
+                    <output class="item-quantity" aria-live="off">1</output>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Domáci medovník">+</button>
+                  </div>
+                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="menu-empty" id="menu-empty" hidden>Nenašli sa žiadne položky. Skúste upraviť hľadanie alebo kategóriu.</p>
+        <p class="visually-hidden" id="cart-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
   </main>
+
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-dialog-title">
+    <header class="cart-dialog-header">
+      <div>
+        <p class="eyebrow">U Josefa <span aria-hidden="true">•</span> vaša objednávka</p>
+        <h2 id="cart-dialog-title">Nákupný košík</h2>
+      </div>
+      <button class="cart-close" type="button" aria-label="Zavrieť košík">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+    </header>
+    <div class="cart-dialog-body">
+      <p class="cart-empty" id="cart-empty">Váš košík je zatiaľ prázdny.</p>
+      <ul class="cart-items" id="cart-items" aria-label="Položky v košíku"></ul>
+    </div>
+    <footer class="cart-dialog-footer">
+      <div class="cart-total">
+        <span>Spolu</span>
+        <strong id="cart-total">0 ₴</strong>
+      </div>
+      <p class="cart-payment-note">Online platba zatiaľ nie je dostupná.</p>
+    </footer>
+  </dialog>
 </body>
 </html>
