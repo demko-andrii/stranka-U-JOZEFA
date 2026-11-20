@@ -313,6 +313,11 @@ const reviewForm = document.querySelector("#review-form");
 const reviewsGrid = document.querySelector(".reviews-grid");
 const reviewFormStatus = document.querySelector("#review-form-status");
 const reviewsStorageKey = "u-josefa-reviews";
+const ratingScore = document.querySelector(".rating-score > strong");
+const ratingScoreStars = document.querySelector(".rating-score-stars");
+const ratingCountText = document.querySelector(".rating-score > p");
+const reviewsCountText = document.querySelector(".reviews-list-heading > span");
+const ratingRows = document.querySelectorAll(".rating-breakdown .rating-row");
 
 if (
   reviewForm instanceof HTMLFormElement
@@ -340,6 +345,7 @@ if (
   const createReviewCard = (review) => {
     const card = document.createElement("article");
     card.className = "review-card";
+    card.dataset.rating = String(review.rating);
 
     const header = document.createElement("header");
     header.className = "review-card-header";
@@ -388,6 +394,44 @@ if (
     return card;
   };
 
+  const formatReviewCount = (count) => {
+    const form = count === 1 ? "hodnotenie" : count >= 2 && count <= 4 ? "hodnotenia" : "hodnotení";
+    return `${count} ${form}`;
+  };
+
+  const updateRatingSummary = () => {
+    const ratings = Array.from(reviewsGrid.querySelectorAll(".review-card"))
+      .map((card) => Number(card.dataset.rating))
+      .filter((rating) => Number.isInteger(rating) && rating >= 1 && rating <= 5);
+    const count = ratings.length;
+    const average = count ? ratings.reduce((total, rating) => total + rating, 0) / count : 0;
+    const formattedAverage = average.toFixed(1);
+
+    if (ratingScore) ratingScore.textContent = formattedAverage;
+    if (ratingScoreStars) {
+      ratingScoreStars.setAttribute(
+        "aria-label",
+        `${average.toLocaleString("sk-SK", { minimumFractionDigits: 1, maximumFractionDigits: 1 })} z 5 hviezdičiek`,
+      );
+    }
+    if (ratingCountText) ratingCountText.textContent = `Počet hodnotení: ${count}`;
+    if (reviewsCountText) reviewsCountText.textContent = formatReviewCount(count);
+
+    ratingRows.forEach((row) => {
+      const rating = Number.parseInt(row.querySelector(".rating-level")?.textContent || "", 10);
+      const percentage = count && rating >= 1 && rating <= 5
+        ? Math.round((ratings.filter((value) => value === rating).length / count) * 100)
+        : 0;
+      const bar = row.querySelector(".rating-bar");
+      const fill = bar?.querySelector("span");
+      const percentText = row.querySelector(".rating-percent");
+
+      if (bar) bar.setAttribute("aria-label", `${percentage} percent`);
+      if (fill) fill.style.width = `${percentage}%`;
+      if (percentText) percentText.textContent = `${percentage}%`;
+    });
+  };
+
   try {
     const storedReviews = localStorage.getItem(reviewsStorageKey);
     if (storedReviews) {
@@ -400,6 +444,7 @@ if (
   } catch {
     reviewFormStatus.textContent = "Uložené hodnotenia sa nepodarilo načítať.";
   }
+  updateRatingSummary();
 
   if (
     nameInput instanceof HTMLInputElement
@@ -420,6 +465,7 @@ if (
 
       const review = { name, rating, text, date: new Date().toISOString() };
       reviewsGrid.append(createReviewCard(review));
+      updateRatingSummary();
 
       try {
         const storedReviews = localStorage.getItem(reviewsStorageKey);

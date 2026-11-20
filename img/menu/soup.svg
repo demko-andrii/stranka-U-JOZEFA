@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title">
+  <title id="title">Miska domácej polievky so zeleninou</title>
+  <rect width="900" height="600" fill="#efe4d2"/>
+  <ellipse cx="450" cy="465" rx="310" ry="48" fill="#d3b995"/>
+  <path d="M170 300h560l-58 150a90 90 0 0 1-84 58H312a90 90 0 0 1-84-58z" fill="#f8f3e8"/>
+  <ellipse cx="450" cy="300" rx="280" ry="92" fill="#70462d"/>
+  <ellipse cx="450" cy="298" rx="248" ry="69" fill="#c77d37"/>
+  <path d="M286 282c42-42 71 8 105-18 29-22 49 17 75 4 25-13 52-28 79-2 26 26 57-7 81 20" fill="none" stroke="#f1d899" stroke-linecap="round" stroke-width="14"/>
+  <g fill="#73914e">
+    <circle cx="335" cy="322" r="13"/><circle cx="418" cy="270" r="11"/><circle cx="520" cy="327" r="14"/>
+    <circle cx="588" cy="282" r="10"/><circle cx="465" cy="345" r="9"/><circle cx="380" cy="300" r="8"/>
+  </g>
+  <g fill="#d85d3e">
+    <circle cx="382" cy="330" r="10"/><circle cx="476" cy="295" r="12"/><circle cx="553" cy="307" r="8"/>
+  </g>
+  <g fill="none" stroke="#fffaf0" stroke-linecap="round" stroke-width="10" opacity=".8">
+    <path d="M365 194c-20-24 20-34 0-58"/><path d="M450 184c-20-24 20-34 0-58"/><path d="M535 194c-20-24 20-34 0-58"/>
+  </g>
+</svg>
