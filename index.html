@@ -4,43 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#17120f">
-  <title>U JOZEFA — Rodinná tradícia od roku 1979</title>
+  <title data-i18n="page.title">U JOZEFA — Rodinná tradícia od roku 1979</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#domov" aria-label="U JOZEFA — Domov">
+      <a class="brand" href="#domov" aria-label="U JOZEFA — Domov" data-i18n-aria-label="brand.home">
         <span class="brand-mark" aria-hidden="true">
           <img src="img/logo-jozef.png" alt="">
         </span>
         <span class="brand-name">U <span>JOZEFA</span></span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-label="Otvoriť navigáciu" aria-controls="primary-navigation" aria-expanded="false">
+      <button class="menu-toggle" type="button" aria-label="Otvoriť navigáciu" data-i18n-aria-label="navigation.open" aria-controls="primary-navigation" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
 
-      <nav class="primary-navigation" id="primary-navigation" aria-label="Hlavná navigácia">
-        <a class="active" href="#domov" aria-current="page">Domov</a>
-        <a href="#menu">Menu</a>
-        <a href="#o-nas">O nás</a>
-        <a href="#rezervacie">Rezervácie</a>
-        <a href="#hodnotenia">Hodnotenia</a>
-        <a href="#kontakt">Kontakty</a>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Hlavná navigácia" data-i18n-aria-label="navigation.label">
+        <a class="active" href="#domov" aria-current="page" data-i18n="navigation.home">Domov</a>
+        <a href="#menu" data-i18n="navigation.menu">Menu</a>
+        <a href="#o-nas" data-i18n="navigation.about">O nás</a>
+        <a href="#rezervacie" data-i18n="navigation.reservations">Rezervácie</a>
+        <a href="#hodnotenia" data-i18n="navigation.reviews">Hodnotenia</a>
+        <a href="#kontakt" data-i18n="navigation.contact">Kontakty</a>
+        <div class="language-switcher" role="group" aria-label="Vybrať jazyk" data-i18n-aria-label="language.label">
+          <button type="button" class="language-option is-active" data-language="sk" aria-pressed="true" aria-label="Slovenčina">SK</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" class="language-option" data-language="uk" aria-pressed="false" aria-label="Українська">UA</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" class="language-option" data-language="en" aria-pressed="false" aria-label="English">EN</button>
+        </div>
       </nav>
 
       <div class="header-actions">
-        <button class="language-button" type="button" aria-label="Jazyk: slovenčina">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="8.5" />
-            <path d="M3.8 12h16.4M12 3.5c2.1 2.3 3.1 5.1 3.1 8.5S14.1 18.2 12 20.5C9.9 18.2 8.9 15.4 8.9 12S9.9 5.8 12 3.5Z" />
-          </svg>
-          <span>SK</span>
-        </button>
-        <button class="cart-button" type="button" aria-label="Košík, položiek: 0" aria-controls="cart-dialog" aria-haspopup="dialog" aria-expanded="false">
+        <button class="cart-button" type="button" aria-label="Košík, položiek: 0" data-i18n-aria-label="cart.button" aria-controls="cart-dialog" aria-haspopup="dialog" aria-expanded="false">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6" />
             <circle cx="9.5" cy="19" r="1" />
@@ -55,19 +55,19 @@
   <main>
     <section class="hero" id="domov" aria-labelledby="hero-title">
       <div class="hero-content">
-        <p class="eyebrow">Rodinná kaviareň <span aria-hidden="true">•</span> Boryslav</p>
-        <h1 id="hero-title">Rodinná tradícia <span>od roku 1979</span></h1>
-        <p class="hero-description">
+        <p class="eyebrow"><span data-i18n="hero.eyebrow">Rodinná kaviareň</span> <span aria-hidden="true">•</span> Boryslav</p>
+        <h1 id="hero-title"><span data-i18n="hero.title">Rodinná tradícia</span> <span data-i18n="hero.since">od roku 1979</span></h1>
+        <p class="hero-description" data-i18n="hero.description">
           Spojenie miestnej histórie a moderného pohodlia v Boryslave.
           Vstúpte do sveta legendárneho podniku, ktorý dýcha dušou.
         </p>
         <div class="hero-actions">
-          <a class="button button-outline" href="#rezervacie">Rezervovať stôl</a>
-          <a class="button button-gold" href="#menu">Pozrieť menu</a>
+          <a class="button button-outline" href="#rezervacie" data-i18n="hero.reserve">Rezervovať stôl</a>
+          <a class="button button-gold" href="#menu" data-i18n="hero.viewMenu">Pozrieť menu</a>
         </div>
       </div>
       <a class="discover-link" href="#menu">
-        <span>Objaviť</span>
+        <span data-i18n="hero.discover">Objaviť</span>
         <span class="discover-line" aria-hidden="true"></span>
       </a>
     </section>
@@ -75,9 +75,9 @@
     <section class="menu-section" id="menu" aria-labelledby="menu-title">
       <div class="menu-inner">
         <header class="menu-heading">
-          <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> od roku 1979</p>
-          <h2 id="menu-title">Menu a ponuka</h2>
-          <p>Vyberte si svoju obľúbenú kávu, poctivý obed alebo niečo sladké k nej.</p>
+          <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> <span data-i18n="brand.since">od roku 1979</span></p>
+          <h2 id="menu-title" data-i18n="menu.title">Menu a ponuka</h2>
+          <p data-i18n="menu.description">Vyberte si svoju obľúbenú kávu, poctivý obed alebo niečo sladké k nej.</p>
         </header>
 
         <div class="menu-tools">
@@ -86,218 +86,218 @@
               <circle cx="10.8" cy="10.8" r="6.8" />
               <path d="m16 16 4.5 4.5" />
             </svg>
-            <span class="visually-hidden">Hľadať jedlo alebo nápoj</span>
-            <input id="menu-search" type="search" placeholder="Hľadať jedlo alebo nápoj..." autocomplete="off">
+            <span class="visually-hidden" data-i18n="menu.searchLabel">Hľadať jedlo alebo nápoj</span>
+            <input id="menu-search" type="search" placeholder="Hľadať jedlo alebo nápoj..." data-i18n-placeholder="menu.searchPlaceholder" autocomplete="off">
           </label>
 
-          <div class="menu-filters" role="group" aria-label="Filtrovať ponuku">
-            <button class="menu-filter is-active" type="button" data-category="all" aria-pressed="true">Všetko</button>
-            <button class="menu-filter" type="button" data-category="coffee" aria-pressed="false">Káva</button>
-            <button class="menu-filter" type="button" data-category="food" aria-pressed="false">Jedlá</button>
-            <button class="menu-filter" type="button" data-category="dessert" aria-pressed="false">Dezerty</button>
+          <div class="menu-filters" role="group" aria-label="Filtrovať ponuku" data-i18n-aria-label="menu.filters">
+            <button class="menu-filter is-active" type="button" data-category="all" aria-pressed="true" data-i18n="menu.all">Všetko</button>
+            <button class="menu-filter" type="button" data-category="coffee" aria-pressed="false" data-i18n="menu.coffee">Káva</button>
+            <button class="menu-filter" type="button" data-category="food" aria-pressed="false" data-i18n="menu.food">Jedlá</button>
+            <button class="menu-filter" type="button" data-category="dessert" aria-pressed="false" data-i18n="menu.desserts">Dezerty</button>
           </div>
         </div>
 
         <div class="menu-grid" id="menu-grid">
-          <article class="menu-card" data-category="coffee" data-price="45" data-search="espresso káva intenzívna čerstvo mleté zrná">
+          <article class="menu-card" data-category="coffee" data-price="45" data-search="espresso káva intenzívna čerstvo mleté zrná" data-menu-key="espresso">
             <div class="menu-card-visual visual-coffee">
-              <img src="img/menu/vienna-coffee.jpg" alt="Espresso v malej čiernej šálke s cremou" loading="lazy" decoding="async">
+              <img src="img/menu/vienna-coffee.jpg" alt="Espresso v malej čiernej šálke s cremou" data-i18n-alt="menu.espresso.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>45 ₴</strong></div>
-              <h3>Espresso</h3>
-              <p>Malá šálka intenzívnej kávy z čerstvo mletých zŕn.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.coffeeSpecialties">Kávové špeciality</span><strong>45 ₴</strong></div>
+              <h3 data-i18n="menu.espresso.name">Espresso</h3>
+              <p data-i18n="menu.espresso.description">Malá šálka intenzívnej kávy z čerstvo mletých zŕn.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">30 ml</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Espresso">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Espresso">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Espresso" data-i18n-aria-label="menu.quantity" data-menu-key="espresso">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Espresso" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Espresso">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Espresso" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="coffee" data-price="65" data-search="cappuccino káva mliečna pena škorica">
+          <article class="menu-card" data-category="coffee" data-price="65" data-search="cappuccino káva mliečna pena škorica" data-menu-key="cappuccino">
             <div class="menu-card-visual visual-coffee">
-              <img src="img/menu/cappuccino.jpg" alt="Cappuccino s mliečnou penou" loading="lazy" decoding="async">
+              <img src="img/menu/cappuccino.jpg" alt="Cappuccino s mliečnou penou" data-i18n-alt="menu.cappuccino.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>65 ₴</strong></div>
-              <h3>Cappuccino</h3>
-              <p>Hladká káva s jemnou mliečnou penou a štipkou škorice.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.coffeeSpecialties">Kávové špeciality</span><strong>65 ₴</strong></div>
+              <h3 data-i18n="menu.cappuccino.name">Cappuccino</h3>
+              <p data-i18n="menu.cappuccino.description">Hladká káva s jemnou mliečnou penou a štipkou škorice.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">180 ml</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Cappuccino">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Cappuccino">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Cappuccino" data-i18n-aria-label="menu.quantity" data-menu-key="cappuccino">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Cappuccino" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Cappuccino">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Cappuccino" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="coffee" data-price="70" data-search="caffè latte cafe latte káva mlieko espresso">
+          <article class="menu-card" data-category="coffee" data-price="70" data-search="caffè latte cafe latte káva mlieko espresso" data-menu-key="latte">
             <div class="menu-card-visual visual-coffee">
-              <img src="img/menu/latte.jpg" alt="Latte s mliekom v sklenenom pohári" loading="lazy" decoding="async">
+              <img src="img/menu/latte.jpg" alt="Latte s mliekom v sklenenom pohári" data-i18n-alt="menu.latte.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>70 ₴</strong></div>
-              <h3>Caffè Latte</h3>
-              <p>Dvojité espresso zaliate horúcim, hebkým mliekom.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.coffeeSpecialties">Kávové špeciality</span><strong>70 ₴</strong></div>
+              <h3 data-i18n="menu.latte.name">Caffè Latte</h3>
+              <p data-i18n="menu.latte.description">Dvojité espresso zaliate horúcim, hebkým mliekom.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">250 ml</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Caffè Latte">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Caffè Latte">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Caffè Latte" data-i18n-aria-label="menu.quantity" data-menu-key="latte">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Caffè Latte" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Caffè Latte">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Caffè Latte" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="coffee" data-price="75" data-search="viedenská káva šľahačka">
+          <article class="menu-card" data-category="coffee" data-price="75" data-search="viedenská káva šľahačka" data-menu-key="vienneseCoffee">
             <div class="menu-card-visual visual-coffee">
-              <img src="img/menu/vienna-coffee-whipped-cream.jpg" alt="Viedenská káva s krémovou penou" loading="lazy" decoding="async">
+              <img src="img/menu/vienna-coffee-whipped-cream.jpg" alt="Viedenská káva s krémovou penou" data-i18n-alt="menu.vienneseCoffee.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Kávové špeciality</span><strong>75 ₴</strong></div>
-              <h3>Viedenská káva</h3>
-              <p>Silná káva s obláčikom šľahačky podľa starej receptúry.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.coffeeSpecialties">Kávové špeciality</span><strong>75 ₴</strong></div>
+              <h3 data-i18n="menu.vienneseCoffee.name">Viedenská káva</h3>
+              <p data-i18n="menu.vienneseCoffee.description">Silná káva s obláčikom šľahačky podľa starej receptúry.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">200 ml</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Viedenská káva">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Viedenská káva">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Viedenská káva" data-i18n-aria-label="menu.quantity" data-menu-key="vienneseCoffee">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Viedenská káva" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Viedenská káva">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Viedenská káva" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="food" data-price="45" data-search="denná polievka obed domáca sezónna">
+          <article class="menu-card" data-category="food" data-price="45" data-search="denná polievka obed domáca sezónna" data-menu-key="soup">
             <div class="menu-card-visual visual-food">
-              <img src="img/menu/daily-soup.jpg" alt="Miska domácej krémovej polievky" loading="lazy" decoding="async">
+              <img src="img/menu/daily-soup.jpg" alt="Miska domácej krémovej polievky" data-i18n-alt="menu.soup.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Obedové menu</span><strong>45 ₴</strong></div>
-              <h3>Denná polievka</h3>
-              <p>Každý deň čerstvá domáca polievka podľa sezónnej ponuky.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.lunchMenu">Obedové menu</span><strong>45 ₴</strong></div>
+              <h3 data-i18n="menu.soup.name">Denná polievka</h3>
+              <p data-i18n="menu.soup.description">Každý deň čerstvá domáca polievka podľa sezónnej ponuky.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">300 ml</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Denná polievka">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Denná polievka">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Denná polievka" data-i18n-aria-label="menu.quantity" data-menu-key="soup">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Denná polievka" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Denná polievka">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Denná polievka" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="food" data-price="135" data-search="kurací rezeň kuracie zemiakový šalát uhorka">
+          <article class="menu-card" data-category="food" data-price="135" data-search="kurací rezeň kuracie zemiakový šalát uhorka" data-menu-key="schnitzel">
             <div class="menu-card-visual visual-food">
-              <img src="img/menu/schnitzel.jpg" alt="Chrumkavé kúsky vyprážaného kuracieho mäsa" loading="lazy" decoding="async">
+              <img src="img/menu/schnitzel.jpg" alt="Chrumkavé kúsky vyprážaného kuracieho mäsa" data-i18n-alt="menu.schnitzel.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Obedové menu</span><strong>135 ₴</strong></div>
-              <h3>Kurací rezeň</h3>
-              <p>Chrumkavý rezeň, zemiakový šalát a domáca kyslá uhorka.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.lunchMenu">Obedové menu</span><strong>135 ₴</strong></div>
+              <h3 data-i18n="menu.schnitzel.name">Kurací rezeň</h3>
+              <p data-i18n="menu.schnitzel.description">Chrumkavý rezeň, zemiakový šalát a domáca kyslá uhorka.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">250 g</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Kurací rezeň">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Kurací rezeň">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Kurací rezeň" data-i18n-aria-label="menu.quantity" data-menu-key="schnitzel">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Kurací rezeň" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Kurací rezeň">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Kurací rezeň" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="food" data-price="110" data-search="domáce pirohy tvaroh zemiaky cibuľka">
+          <article class="menu-card" data-category="food" data-price="110" data-search="domáce pirohy tvaroh zemiaky cibuľka" data-menu-key="pierogi">
             <div class="menu-card-visual visual-food">
-              <img src="img/menu/pierogi.jpg" alt="Domáce plnené pirohy" loading="lazy" decoding="async">
+              <img src="img/menu/pierogi.jpg" alt="Domáce plnené pirohy" data-i18n-alt="menu.pierogi.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Obedové menu</span><strong>110 ₴</strong></div>
-              <h3>Domáce pirohy</h3>
-              <p>Plnené pirohy s tvarohom alebo zemiakmi a cibuľkou.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.lunchMenu">Obedové menu</span><strong>110 ₴</strong></div>
+              <h3 data-i18n="menu.pierogi.name">Domáce pirohy</h3>
+              <p data-i18n="menu.pierogi.description">Plnené pirohy s tvarohom alebo zemiakmi a cibuľkou.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">300 g</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Domáce pirohy">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Domáce pirohy">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Domáce pirohy" data-i18n-aria-label="menu.quantity" data-menu-key="pierogi">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Domáce pirohy" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Domáce pirohy">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Domáce pirohy" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="food" data-price="180" data-search="denné menu polievka hlavné jedlo lokálne suroviny">
+          <article class="menu-card" data-category="food" data-price="180" data-search="denné menu polievka hlavné jedlo lokálne suroviny" data-menu-key="dailyMenu">
             <div class="menu-card-visual visual-food">
-              <img src="img/menu/soup.jpg" alt="Jedlo s čerstvou prílohou" loading="lazy" decoding="async">
+              <img src="img/menu/soup.jpg" alt="Jedlo s čerstvou prílohou" data-i18n-alt="menu.dailyMenu.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Obedové menu</span><strong>180 ₴</strong></div>
-              <h3>Denné menu</h3>
-              <p>Polievka a hlavné jedlo pripravené z lokálnych surovín.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.lunchMenu">Obedové menu</span><strong>180 ₴</strong></div>
+              <h3 data-i18n="menu.dailyMenu.name">Denné menu</h3>
+              <p data-i18n="menu.dailyMenu.description">Polievka a hlavné jedlo pripravené z lokálnych surovín.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">450 g</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Denné menu">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Denné menu">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Denné menu" data-i18n-aria-label="menu.quantity" data-menu-key="dailyMenu">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Denné menu" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Denné menu">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Denné menu" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="menu-card" data-category="dessert" data-price="75" data-search="domáci medovník dezert med">
+          <article class="menu-card" data-category="dessert" data-price="75" data-search="domáci medovník dezert med" data-menu-key="honeyCake">
             <div class="menu-card-visual visual-dessert">
-              <img src="img/menu/medovnik.jpg" alt="Vrstvená čokoládová torta s krémom" loading="lazy" decoding="async">
+              <img src="img/menu/medovnik.jpg" alt="Vrstvená čokoládová torta s krémom" data-i18n-alt="menu.honeyCake.alt" loading="lazy" decoding="async">
             </div>
             <div class="menu-card-content">
-              <div class="menu-card-meta"><span>Domáce dezerty</span><strong>75 ₴</strong></div>
-              <h3>Domáci medovník</h3>
-              <p>Vrstvený medový koláč s jemným krémom podľa rodinného receptu.</p>
+              <div class="menu-card-meta"><span data-i18n="menu.homemadeDesserts">Domáce dezerty</span><strong>75 ₴</strong></div>
+              <h3 data-i18n="menu.honeyCake.name">Domáci medovník</h3>
+              <p data-i18n="menu.honeyCake.description">Vrstvený medový koláč s jemným krémom podľa rodinného receptu.</p>
               <div class="menu-card-footer">
                 <span class="menu-size">120 g</span>
                 <div class="menu-order">
-                  <div class="quantity-control" aria-label="Množstvo Domáci medovník">
-                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Domáci medovník">−</button>
+                  <div class="quantity-control" aria-label="Množstvo Domáci medovník" data-i18n-aria-label="menu.quantity" data-menu-key="honeyCake">
+                    <button type="button" data-quantity-change="-1" aria-label="Znížiť množstvo Domáci medovník" data-i18n-aria-label="menu.decreaseQuantity">−</button>
                     <output class="item-quantity" aria-live="off">1</output>
-                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Domáci medovník">+</button>
+                    <button type="button" data-quantity-change="1" aria-label="Zvýšiť množstvo Domáci medovník" data-i18n-aria-label="menu.increaseQuantity">+</button>
                   </div>
-                  <button class="add-to-cart" type="button">Pridať do košíka</button>
+                  <button class="add-to-cart" type="button" data-i18n="menu.addToCart">Pridať do košíka</button>
                 </div>
               </div>
             </div>
           </article>
         </div>
-        <p class="menu-empty" id="menu-empty" hidden>Nenašli sa žiadne položky. Skúste upraviť hľadanie alebo kategóriu.</p>
+        <p class="menu-empty" id="menu-empty" hidden data-i18n="menu.empty">Nenašli sa žiadne položky. Skúste upraviť hľadanie alebo kategóriu.</p>
         <p class="visually-hidden" id="cart-status" role="status" aria-live="polite"></p>
       </div>
     </section>
@@ -305,65 +305,65 @@
     <section class="about-section" id="o-nas" aria-labelledby="about-title">
       <div class="about-hero">
         <div class="about-hero-content">
-          <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> od roku 1979</p>
-          <h2 id="about-title">Viac než kaviareň.<span>Príbeh Boryslava.</span></h2>
-          <p>Rodinné hodnoty, historické korene a pohostinnosť, ktorá spája ľudí.</p>
+          <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> <span data-i18n="brand.since">od roku 1979</span></p>
+          <h2 id="about-title"><span data-i18n="about.title">Viac než kaviareň.</span><span data-i18n="about.subtitle">Príbeh Boryslava.</span></h2>
+          <p data-i18n="about.description">Rodinné hodnoty, historické korene a pohostinnosť, ktorá spája ľudí.</p>
         </div>
       </div>
 
       <div class="about-inner">
         <section class="about-story" aria-labelledby="story-title">
           <header class="about-section-heading">
-            <p class="eyebrow">Dve kapitoly, jedno miesto</p>
-            <h3 id="story-title">Náš príbeh</h3>
+            <p class="eyebrow" data-i18n="about.chapters">Dve kapitoly, jedno miesto</p>
+            <h3 id="story-title" data-i18n="about.story">Náš príbeh</h3>
           </header>
 
-          <ol class="history-timeline" aria-label="Časová os histórie kaviarne">
+          <ol class="history-timeline" aria-label="Časová os histórie kaviarne" data-i18n-aria-label="about.timeline">
             <li>
-              <span class="history-date">Od roku 1979</span>
-              <span class="history-label">Štátna kaviareň Veselka</span>
+              <span class="history-date" data-i18n="about.date1979">Od roku 1979</span>
+              <span class="history-label" data-i18n="about.timelineVeselka">Štátna kaviareň Veselka</span>
             </li>
             <li>
-              <span class="history-date">Rok 2000</span>
-              <span class="history-label">Nová rodinná kapitola</span>
+              <span class="history-date" data-i18n="about.date2000">Rok 2000</span>
+              <span class="history-label" data-i18n="about.timelineFamily">Nová rodinná kapitola</span>
             </li>
           </ol>
 
           <div class="history-grid">
             <article class="history-card">
               <figure>
-                <img src="img/about/veselka-illustration.jpg" alt="Ilustračný interiér tradičnej kaviarne; nejde o archívny záber Veselky." loading="lazy" decoding="async">
-                <figcaption>Ilustračná fotografia kaviarne</figcaption>
+                <img src="img/about/veselka-illustration.jpg" alt="Ilustračný interiér tradičnej kaviarne; nejde o archívny záber Veselky." data-i18n-alt="about.veselkaAlt" loading="lazy" decoding="async">
+                <figcaption data-i18n="about.cafeIllustration">Ilustračná fotografia kaviarne</figcaption>
               </figure>
-              <h4>Začiatky: štátna kaviareň Veselka</h4>
-              <p>Od roku 1979 v tejto budove fungovala štátna kaviareň Veselka. Miestni obyvatelia si miesto pamätajú aj z týchto čias.</p>
+              <h4 data-i18n="about.veselkaTitle">Začiatky: štátna kaviareň Veselka</h4>
+              <p data-i18n="about.veselkaText">Od roku 1979 v tejto budove fungovala štátna kaviareň Veselka. Miestni obyvatelia si miesto pamätajú aj z týchto čias.</p>
             </article>
 
             <article class="history-card">
               <figure>
-                <img src="img/about/family-cafe.jpg" alt="Ilustračná fotografia interiéru rodinnej kaviarne." loading="lazy" decoding="async">
-                <figcaption>Ilustračná fotografia rodinnej kaviarne</figcaption>
+                <img src="img/about/family-cafe.jpg" alt="Ilustračná fotografia interiéru rodinnej kaviarne." data-i18n-alt="about.familyCafeAlt" loading="lazy" decoding="async">
+                <figcaption data-i18n="about.familyCafeCaption">Ilustračná fotografia rodinnej kaviarne</figcaption>
               </figure>
-              <h4>Nová kapitola: U JOZEFA</h4>
-              <p>V roku 2000 budovu odkúpil strýko Jozef z Ameriky a daroval ju babičke. Z tohto rodinného príbehu vyrástla tradícia kaviarne U JOZEFA.</p>
+              <h4 data-i18n="about.familyTitle">Nová kapitola: U JOZEFA</h4>
+              <p data-i18n="about.familyText">V roku 2000 budovu odkúpil strýko Jozef z Ameriky a daroval ju babičke. Z tohto rodinného príbehu vyrástla tradícia kaviarne U JOZEFA.</p>
             </article>
           </div>
         </section>
 
         <section class="about-spaces" aria-labelledby="spaces-title">
           <div class="about-spaces-copy">
-            <p class="eyebrow">Naše priestory</p>
-            <h3 id="spaces-title">Miesto pre spoločné chvíle</h3>
-            <p>U JOZEFA spája miestnu históriu, domácu atmosféru a moderné pohodlie. Priestor je určený na kávu, obed aj rodinné oslavy.</p>
+            <p class="eyebrow" data-i18n="about.spaces">Naše priestory</p>
+            <h3 id="spaces-title" data-i18n="about.spacesTitle">Miesto pre spoločné chvíle</h3>
+            <p data-i18n="about.spacesText">U JOZEFA spája miestnu históriu, domácu atmosféru a moderné pohodlie. Priestor je určený na kávu, obed aj rodinné oslavy.</p>
             <ul class="space-list">
-              <li>Hlavná kaviareň</li>
-              <li>Tichý salónik</li>
-              <li>Letná terasa</li>
+              <li data-i18n="about.spaceCafe">Hlavná kaviareň</li>
+              <li data-i18n="about.spaceLounge">Tichý salónik</li>
+              <li data-i18n="about.spaceTerrace">Letná terasa</li>
             </ul>
           </div>
           <figure class="about-space-photo">
-            <img src="img/about/quiet-salon.jpg" alt="Ilustračná fotografia interiéru kaviarne s miestami na sedenie." loading="lazy" decoding="async">
-            <figcaption>Ilustračná fotografia priestoru kaviarne</figcaption>
+            <img src="img/about/quiet-salon.jpg" alt="Ilustračná fotografia interiéru kaviarne s miestami na sedenie." data-i18n-alt="about.salonAlt" loading="lazy" decoding="async">
+            <figcaption data-i18n="about.salonCaption">Ilustračná fotografia priestoru kaviarne</figcaption>
           </figure>
         </section>
       </div>
@@ -371,82 +371,82 @@
 
     <section class="reservation-section" id="rezervacie" aria-labelledby="reservation-title">
       <header class="reservation-hero">
-        <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> rezervácie</p>
-        <h2 id="reservation-title">Rezervujte si svoj stôl</h2>
-        <p>Či plánujete pokojný obed, rodinnú oslavu alebo pracovné stretnutie, radi vám pomôžeme pripraviť príjemný zážitok.</p>
+        <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> <span data-i18n="reservation.eyebrow">rezervácie</span></p>
+        <h2 id="reservation-title" data-i18n="reservation.title">Rezervujte si svoj stôl</h2>
+        <p data-i18n="reservation.description">Či plánujete pokojný obed, rodinnú oslavu alebo pracovné stretnutie, radi vám pomôžeme pripraviť príjemný zážitok.</p>
       </header>
 
       <div class="reservation-inner">
         <form class="reservation-form" id="reservation-form">
           <fieldset class="reservation-step">
-            <legend class="visually-hidden">Detaily rezervácie</legend>
+            <legend class="visually-hidden" data-i18n="reservation.details">Detaily rezervácie</legend>
             <div class="reservation-step-heading">
-              <p class="eyebrow">01 <span aria-hidden="true">•</span> Váš stôl</p>
-              <h3>Detaily rezervácie</h3>
+              <p class="eyebrow">01 <span aria-hidden="true">•</span> <span data-i18n="reservation.yourTable">Váš stôl</span></p>
+              <h3 data-i18n="reservation.details">Detaily rezervácie</h3>
             </div>
 
             <div class="reservation-fields">
               <div class="reservation-field">
-                <label for="reservation-date">Dátum rezervácie <span aria-hidden="true">*</span></label>
+                <label for="reservation-date"><span data-i18n="reservation.date">Dátum rezervácie</span> <span aria-hidden="true">*</span></label>
                 <input id="reservation-date" name="date" type="date" required>
               </div>
               <div class="reservation-field">
-                <label for="reservation-time">Čas rezervácie <span aria-hidden="true">*</span></label>
+                <label for="reservation-time"><span data-i18n="reservation.time">Čas rezervácie</span> <span aria-hidden="true">*</span></label>
                 <input id="reservation-time" name="time" type="time" required>
               </div>
               <div class="reservation-field">
-                <label for="reservation-guests">Počet osôb <span aria-hidden="true">*</span></label>
+                <label for="reservation-guests"><span data-i18n="reservation.guests">Počet osôb</span> <span aria-hidden="true">*</span></label>
                 <select id="reservation-guests" name="guests" required>
-                  <option value="" selected disabled>Vyberte počet osôb</option>
-                  <option value="1">1 osoba</option>
-                  <option value="2">2 osoby</option>
-                  <option value="3">3 osoby</option>
-                  <option value="4">4 osoby</option>
-                  <option value="5">5 osôb</option>
-                  <option value="6">6 osôb</option>
-                  <option value="7">7 osôb</option>
-                  <option value="8">8 osôb</option>
-                  <option value="9">9 osôb</option>
-                  <option value="10">10 a viac osôb</option>
+                  <option value="" selected disabled data-i18n="reservation.chooseGuests">Vyberte počet osôb</option>
+                  <option value="1" data-i18n="reservation.guest1">1 osoba</option>
+                  <option value="2" data-i18n="reservation.guest2">2 osoby</option>
+                  <option value="3" data-i18n="reservation.guest3">3 osoby</option>
+                  <option value="4" data-i18n="reservation.guest4">4 osoby</option>
+                  <option value="5" data-i18n="reservation.guest5">5 osôb</option>
+                  <option value="6" data-i18n="reservation.guest6">6 osôb</option>
+                  <option value="7" data-i18n="reservation.guest7">7 osôb</option>
+                  <option value="8" data-i18n="reservation.guest8">8 osôb</option>
+                  <option value="9" data-i18n="reservation.guest9">9 osôb</option>
+                  <option value="10" data-i18n="reservation.guest10">10 a viac osôb</option>
                 </select>
               </div>
               <div class="reservation-field">
-                <label for="reservation-occasion">Typ návštevy <span aria-hidden="true">*</span></label>
+                <label for="reservation-occasion"><span data-i18n="reservation.occasion">Typ návštevy</span> <span aria-hidden="true">*</span></label>
                 <select id="reservation-occasion" name="occasion" required>
-                  <option value="" selected disabled>Vyberte príležitosť</option>
-                  <option value="bežná návšteva">Bežná návšteva</option>
-                  <option value="obed s kolegami">Obed s kolegami</option>
-                  <option value="rodinná oslava">Rodinná oslava</option>
-                  <option value="firemné stretnutie">Firemné stretnutie</option>
-                  <option value="iná príležitosť">Iná príležitosť</option>
+                  <option value="" selected disabled data-i18n="reservation.chooseOccasion">Vyberte príležitosť</option>
+                  <option value="bežná návšteva" data-i18n="reservation.visit">Bežná návšteva</option>
+                  <option value="obed s kolegami" data-i18n="reservation.lunch">Obed s kolegami</option>
+                  <option value="rodinná oslava" data-i18n="reservation.celebration">Rodinná oslava</option>
+                  <option value="firemné stretnutie" data-i18n="reservation.meeting">Firemné stretnutie</option>
+                  <option value="iná príležitosť" data-i18n="reservation.other">Iná príležitosť</option>
                 </select>
               </div>
               <div class="reservation-field reservation-field-wide">
-                <label for="reservation-note">Špeciálne požiadavky <span>(nepovinné)</span></label>
-                <textarea id="reservation-note" name="note" rows="4" placeholder="Napíšte nám svoje požiadavky, počet detí alebo želaný stôl..."></textarea>
+                <label for="reservation-note"><span data-i18n="reservation.specialRequests">Špeciálne požiadavky</span> <span data-i18n="form.optional">(nepovinné)</span></label>
+                <textarea id="reservation-note" name="note" rows="4" placeholder="Napíšte nám svoje požiadavky, počet detí alebo želaný stôl..." data-i18n-placeholder="reservation.notePlaceholder"></textarea>
               </div>
             </div>
           </fieldset>
 
           <fieldset class="reservation-step">
-            <legend class="visually-hidden">Kontaktné údaje</legend>
+            <legend class="visually-hidden" data-i18n="reservation.contactDetails">Kontaktné údaje</legend>
             <div class="reservation-step-heading">
-              <p class="eyebrow">02 <span aria-hidden="true">•</span> Aby sme sa vám ozvali</p>
-              <h3>Kontaktné údaje</h3>
+              <p class="eyebrow">02 <span aria-hidden="true">•</span> <span data-i18n="reservation.weWillContact">Aby sme sa vám ozvali</span></p>
+              <h3 data-i18n="reservation.contactDetails">Kontaktné údaje</h3>
             </div>
 
             <div class="reservation-fields">
               <div class="reservation-field">
-                <label for="reservation-name">Meno a priezvisko <span aria-hidden="true">*</span></label>
-                <input id="reservation-name" name="name" type="text" autocomplete="name" placeholder="Vaše meno" required>
+                <label for="reservation-name"><span data-i18n="form.name">Meno a priezvisko</span> <span aria-hidden="true">*</span></label>
+                <input id="reservation-name" name="name" type="text" autocomplete="name" placeholder="Vaše meno" data-i18n-placeholder="form.yourName" required>
               </div>
               <div class="reservation-field">
-                <label for="reservation-phone">Telefónne číslo <span aria-hidden="true">*</span></label>
+                <label for="reservation-phone"><span data-i18n="form.phone">Telefónne číslo</span> <span aria-hidden="true">*</span></label>
                 <input id="reservation-phone" name="phone" type="tel" autocomplete="tel" placeholder="+380 00 000 00 00" required>
               </div>
               <div class="reservation-field reservation-field-wide">
-                <label for="reservation-email">E-mail <span>(nepovinný)</span></label>
-                <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="vas@email.sk">
+                <label for="reservation-email">E-mail <span data-i18n="form.optional">(nepovinný)</span></label>
+                <input id="reservation-email" name="email" type="email" autocomplete="email" placeholder="vas@email.sk" data-i18n-placeholder="form.email">
               </div>
             </div>
           </fieldset>
@@ -460,17 +460,17 @@
             <div>
               <h3 id="reservation-confirmation-title"></h3>
               <p id="reservation-confirmation-details"></p>
-              <p class="reservation-confirmation-note">Ide o prototyp bez serverového odoslania; prevádzka túto žiadosť zatiaľ nedostane.</p>
+              <p class="reservation-confirmation-note" data-i18n="reservation.prototypeNote">Ide o prototyp bez serverového odoslania; prevádzka túto žiadosť zatiaľ nedostane.</p>
             </div>
           </div>
 
           <button class="reservation-submit" type="submit">
-            Odoslať žiadosť o rezerváciu
+            <span data-i18n="reservation.submit">Odoslať žiadosť o rezerváciu</span>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M4 12h15m-6-6 6 6-6 6" />
             </svg>
           </button>
-          <p class="reservation-form-note">Polia označené hviezdičkou sú povinné. Údaje z tohto prototypu sa neodosielajú na server.</p>
+          <p class="reservation-form-note" data-i18n="reservation.formNote">Polia označené hviezdičkou sú povinné. Údaje z tohto prototypu sa neodosielajú na server.</p>
         </form>
       </div>
     </section>
@@ -478,23 +478,23 @@
     <section class="reviews-section" id="hodnotenia" aria-labelledby="reviews-title">
       <header class="reviews-hero">
         <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> Boryslav</p>
-        <h2 id="reviews-title">Hodnotenia našich hostí</h2>
-        <p>Čo hovoria ľudia, ktorí nás navštívili.</p>
+        <h2 id="reviews-title" data-i18n="reviews.title">Hodnotenia našich hostí</h2>
+        <p data-i18n="reviews.description">Čo hovoria ľudia, ktorí nás navštívili.</p>
       </header>
 
       <div class="reviews-inner">
         <header class="reviews-section-heading">
-          <p class="eyebrow">Hlas našich hostí</p>
-          <h3>Miesto, kam sa radi vraciate</h3>
+          <p class="eyebrow" data-i18n="reviews.voice">Hlas našich hostí</p>
+          <h3 data-i18n="reviews.welcome">Miesto, kam sa radi vraciate</h3>
         </header>
 
         <div class="rating-summary">
           <div class="rating-score">
             <strong>4.8</strong>
             <span class="rating-score-stars" role="img" aria-label="4,8 z 5 hviezdičiek">★★★★★</span>
-            <p>Založené na 6 hodnoteniach</p>
+            <p data-i18n="reviews.basedOn">Založené na 6 hodnoteniach</p>
           </div>
-          <div class="rating-breakdown" aria-label="Rozdelenie hodnotení">
+          <div class="rating-breakdown" aria-label="Rozdelenie hodnotení" data-i18n-aria-label="reviews.breakdown">
             <div class="rating-row">
               <span class="rating-level">5 <span aria-hidden="true">★</span></span>
               <span class="rating-bar" role="img" aria-label="83 percent">
@@ -535,8 +535,8 @@
 
         <div class="reviews-list-heading">
           <div>
-            <p class="eyebrow">Skúsenosti z prvej ruky</p>
-            <h3>Čo hovoria naši hostia</h3>
+            <p class="eyebrow" data-i18n="reviews.firsthand">Skúsenosti z prvej ruky</p>
+            <h3 data-i18n="reviews.whatTheySay">Čo hovoria naši hostia</h3>
           </div>
           <span>6 hodnotení</span>
         </div>
@@ -553,7 +553,7 @@
               </div>
               <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
             </header>
-            <blockquote><p>Nádherná atmosféra a nezabudnuteľná káva. Odporúčam každému.</p></blockquote>
+            <blockquote><p data-i18n="reviews.quote1">Nádherná atmosféra a nezabudnuteľná káva. Odporúčam každému.</p></blockquote>
           </article>
 
           <article class="review-card" data-rating="5">
@@ -567,7 +567,7 @@
               </div>
               <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
             </header>
-            <blockquote><p>Čarovné miesto s krásnou históriou. Koláč bol výborný a obsluha milá.</p></blockquote>
+            <blockquote><p data-i18n="reviews.quote2">Čarovné miesto s krásnou históriou. Koláč bol výborný a obsluha milá.</p></blockquote>
           </article>
 
           <article class="review-card" data-rating="4">
@@ -581,7 +581,7 @@
               </div>
               <span class="review-stars" role="img" aria-label="4 z 5 hviezdičiek"><span aria-hidden="true">★★★★☆</span></span>
             </header>
-            <blockquote><p>Skvelé posedenie v srdci mesta. Určite sa sem ešte vrátim.</p></blockquote>
+            <blockquote><p data-i18n="reviews.quote3">Skvelé posedenie v srdci mesta. Určite sa sem ešte vrátim.</p></blockquote>
           </article>
 
           <article class="review-card" data-rating="5">
@@ -595,7 +595,7 @@
               </div>
               <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
             </header>
-            <blockquote><p>Tichá, útulná a plná príbehov. Káva chutila naozaj výborne.</p></blockquote>
+            <blockquote><p data-i18n="reviews.quote4">Tichá, útulná a plná príbehov. Káva chutila naozaj výborne.</p></blockquote>
           </article>
 
           <article class="review-card" data-rating="5">
@@ -609,7 +609,7 @@
               </div>
               <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
             </header>
-            <blockquote><p>Jedinečný podnik, ktorý má dušu. Veľmi príjemný večer.</p></blockquote>
+            <blockquote><p data-i18n="reviews.quote5">Jedinečný podnik, ktorý má dušu. Veľmi príjemný večer.</p></blockquote>
           </article>
 
           <article class="review-card" data-rating="5">
@@ -623,37 +623,37 @@
               </div>
               <span class="review-stars" role="img" aria-label="5 z 5 hviezdičiek"><span aria-hidden="true">★★★★★</span></span>
             </header>
-            <blockquote><p>Krásne prostredie a domáca atmosféra. Ďakujeme za zážitok.</p></blockquote>
+            <blockquote><p data-i18n="reviews.quote6">Krásne prostredie a domáca atmosféra. Ďakujeme za zážitok.</p></blockquote>
           </article>
         </div>
 
         <form class="review-form reservation-form" id="review-form">
           <div class="review-form-heading">
-            <p class="eyebrow">Podeľte sa o svoj zážitok</p>
-            <h3>Napíšte nám hodnotenie</h3>
+            <p class="eyebrow" data-i18n="reviews.share">Podeľte sa o svoj zážitok</p>
+            <h3 data-i18n="reviews.write">Napíšte nám hodnotenie</h3>
           </div>
           <div class="reservation-fields">
             <div class="reservation-field">
-              <label for="review-name">Vaše meno <span aria-hidden="true">*</span></label>
-              <input id="review-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Vaše meno" required>
+              <label for="review-name"><span data-i18n="form.yourName">Vaše meno</span> <span aria-hidden="true">*</span></label>
+              <input id="review-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Vaše meno" data-i18n-placeholder="form.yourName" required>
             </div>
             <div class="reservation-field">
-              <label for="review-rating">Hodnotenie <span aria-hidden="true">*</span></label>
+              <label for="review-rating"><span data-i18n="reviews.rating">Hodnotenie</span> <span aria-hidden="true">*</span></label>
               <select id="review-rating" name="rating" required>
-                <option value="5">5 hviezdičiek</option>
-                <option value="4">4 hviezdičky</option>
-                <option value="3">3 hviezdičky</option>
-                <option value="2">2 hviezdičky</option>
-                <option value="1">1 hviezdička</option>
+                <option value="5" data-i18n="reviews.stars5">5 hviezdičiek</option>
+                <option value="4" data-i18n="reviews.stars4">4 hviezdičky</option>
+                <option value="3" data-i18n="reviews.stars3">3 hviezdičky</option>
+                <option value="2" data-i18n="reviews.stars2">2 hviezdičky</option>
+                <option value="1" data-i18n="reviews.stars1">1 hviezdička</option>
               </select>
             </div>
             <div class="reservation-field reservation-field-wide">
-              <label for="review-text">Vaša recenzia <span aria-hidden="true">*</span></label>
-              <textarea id="review-text" name="text" rows="4" maxlength="1000" placeholder="Podeľte sa o svoj zážitok z návštevy..." required></textarea>
+              <label for="review-text"><span data-i18n="reviews.review">Vaša recenzia</span> <span aria-hidden="true">*</span></label>
+              <textarea id="review-text" name="text" rows="4" maxlength="1000" placeholder="Podeľte sa o svoj zážitok z návštevy..." data-i18n-placeholder="reviews.reviewPlaceholder" required></textarea>
             </div>
           </div>
-          <button class="reservation-submit" type="submit">Odoslať hodnotenie</button>
-          <p class="reservation-form-note">Hodnotenie sa uloží v tomto zariadení. Polia označené hviezdičkou sú povinné.</p>
+          <button class="reservation-submit" type="submit" data-i18n="reviews.submit">Odoslať hodnotenie</button>
+          <p class="reservation-form-note" data-i18n="reviews.formNote">Hodnotenie sa uloží v tomto zariadení. Polia označené hviezdičkou sú povinné.</p>
           <p class="review-form-status" id="review-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
         </form>
       </div>
@@ -663,23 +663,23 @@
       <div class="contact-inner">
         <header class="contact-heading">
           <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> Boryslav</p>
-          <h2 id="contact-title">Navštívte nás</h2>
-          <p>Radi vás privítame na dobrej káve a príjemnom posedení.</p>
+          <h2 id="contact-title" data-i18n="contact.title">Navštívte nás</h2>
+          <p data-i18n="contact.description">Radi vás privítame na dobrej káve a príjemnom posedení.</p>
         </header>
 
         <div class="contact-grid">
           <article class="contact-card">
-            <h3>Kde nás nájdete</h3>
-            <address><a class="contact-address-link" href="https://maps.app.goo.gl/abeN7UNxZwrWpmPX8?g_st=ic" target="_blank" rel="noopener noreferrer">82300, Boryslav,<br>Doroshenka St., 19</a></address>
+            <h3 data-i18n="contact.findUs">Kde nás nájdete</h3>
+            <address><a class="contact-address-link" href="https://maps.app.goo.gl/abeN7UNxZwrWpmPX8?g_st=ic" target="_blank" rel="noopener noreferrer"><span data-i18n="contact.addressCity">82300, Boryslav,</span><br><span data-i18n="contact.addressStreet">Doroshenka St., 19</span></a></address>
           </article>
 
           <article class="contact-card">
-            <h3>Otváracie hodiny</h3>
-            <p class="contact-hours">Každý deň <span>09:00 - 17:00</span></p>
+            <h3 data-i18n="contact.hoursTitle">Otváracie hodiny</h3>
+            <p class="contact-hours"><span class="contact-hours-label" data-i18n="contact.everyDay">Každý deň</span> <span>09:00 - 17:00</span></p>
           </article>
 
           <article class="contact-card">
-            <h3>Ozvite sa nám</h3>
+            <h3 data-i18n="contact.reachUs">Ozvite sa nám</h3>
             <a class="contact-detail" href="tel:+380635582109">+380 63 55 82 109</a>
             <a class="contact-detail" href="mailto:kafe.u.jozefa@gmail.com">kafe.u.jozefa@gmail.com</a>
           </article>
@@ -694,32 +694,32 @@
         <img src="img/logo-jozef.png" alt="" aria-hidden="true">
         <span class="footer-brand-name">U JOZEFA</span>
       </a>
-      <p>© 2026 U JOZEFA. Všetky práva vyhradené.</p>
+      <p data-i18n="footer.copyright">© 2026 U JOZEFA. Všetky práva vyhradené.</p>
     </div>
   </footer>
 
   <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-dialog-title">
     <header class="cart-dialog-header">
       <div>
-        <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> vaša objednávka</p>
-        <h2 id="cart-dialog-title">Nákupný košík</h2>
+        <p class="eyebrow">U JOZEFA <span aria-hidden="true">•</span> <span data-i18n="cart.order">vaša objednávka</span></p>
+        <h2 id="cart-dialog-title" data-i18n="cart.title">Nákupný košík</h2>
       </div>
-      <button class="cart-close" type="button" aria-label="Zavrieť košík">
+      <button class="cart-close" type="button" aria-label="Zavrieť košík" data-i18n-aria-label="cart.close">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="m6 6 12 12M18 6 6 18" />
         </svg>
       </button>
     </header>
     <div class="cart-dialog-body">
-      <p class="cart-empty" id="cart-empty">Váš košík je zatiaľ prázdny.</p>
-      <ul class="cart-items" id="cart-items" aria-label="Položky v košíku"></ul>
+      <p class="cart-empty" id="cart-empty" data-i18n="cart.empty">Váš košík je zatiaľ prázdny.</p>
+      <ul class="cart-items" id="cart-items" aria-label="Položky v košíku" data-i18n-aria-label="cart.items"></ul>
     </div>
     <footer class="cart-dialog-footer">
       <div class="cart-total">
-        <span>Spolu</span>
+        <span data-i18n="cart.total">Spolu</span>
         <strong id="cart-total">0 ₴</strong>
       </div>
-      <p class="cart-payment-note">Online platba zatiaľ nie je dostupná.</p>
+      <p class="cart-payment-note" data-i18n="cart.paymentNote">Online platba zatiaľ nie je dostupná.</p>
     </footer>
   </dialog>
 </body>
